@@ -6,10 +6,10 @@ const CATEGORIES = ["Study", "Assignment", "Lab", "Event"];
 function App() {
   // Task 1: tasks stored with useState (id, title, category)
   const [tasks, setTasks] = useState([
-    { id: 1, title: "Revise Chapter 4 of Data Structures", category: "Study" },
-    { id: 2, title: "Submit React mini project on GitHub", category: "Assignment" },
-    { id: 3, title: "Finish circuit analysis lab report", category: "Lab" },
-    { id: 4, title: "Attend the career fair in the main hall", category: "Event" },
+    { id: 1, title: "Revise useState concept for viva", category: "Study" },
+    { id: 2, title: "Submit React assignment on teams", category: "Assignment" },
+    { id: 3, title: "complete lab 1-5 of advance web engineering", category: "Lab" },
+    { id: 4, title: "Attend AI workshop", category: "Event" },
   ]);
 
   // Task 3: controlled form inputs
