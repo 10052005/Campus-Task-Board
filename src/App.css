@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap");
+
+:root {
+  --bg: #e6edf0;
+  --ink: #16282e;
+  --muted: #5b6f76;
+  --brand: #1d4e5f;
+  --study: #2b6cb0;
+  --assignment: #b7791f;
+  --lab: #2f855a;
+  --event: #b83280;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: block;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.board {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+  text-align: left;
+}
+
+.board-header h1 {
+  margin: 0;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  letter-spacing: -0.02em;
+  color: var(--brand);
+}
+
+.board-count { margin: 4px 0 28px; color: var(--muted); }
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+  margin-bottom: 32px;
+  background: #fff;
+  border: 2px solid var(--brand);
+  border-radius: 6px;
+}
+
+.task-input, .task-select, .add-btn {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #b9c7cc;
+}
+
+.task-input { flex: 1 1 240px; }
+.task-select { background: #fff; }
+
+.add-btn {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-btn:hover { background: #143a47; }
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.task-card {
+  --accent: var(--brand);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 120px;
+  padding: 16px 16px 14px 18px;
+  background: #fff;
+  border-left: 8px solid var(--accent);
+  border-radius: 4px 14px 4px 14px;
+}
+.task-card.cat-study { --accent: var(--study); }
+.task-card.cat-assignment { --accent: var(--assignment); }
+.task-card.cat-lab { --accent: var(--lab); }
+.task-card.cat-event { --accent: var(--event); }
+
+.task-title {
+  margin: 0;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.task-category {
+  align-self: flex-start;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
